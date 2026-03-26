@@ -1,0 +1,59 @@
+/* Intro splash */
+.intro {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(145deg, var(--blush), var(--cream));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 50;
+  animation: fadeIn 1.2s ease forwards;
+}
+
+.intro h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3.8rem;
+  color: var(--charcoal);
+  margin-bottom: 0.5rem;
+}
+
+.intro-sub {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  margin-bottom: 2rem;
+}
+
+.intro button {
+  background: var(--accent);
+  border: none;
+  padding: 0.8rem 1.8rem;
+  border-radius: 30px;
+  color: var(--charcoal);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.intro button:hover {
+  background: var(--blush);
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Smooth fade-out of intro */
+.fade-out {
+  animation: fadeOut 1s ease forwards;
+}
+
+@keyframes fadeOut {
+  to { opacity: 0; visibility: hidden; }
+}
